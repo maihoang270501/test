@@ -19,12 +19,6 @@ body {
   min-height: 100vh;
 }
 
-/* Global Link styles */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 /* Header */
 .header {
   background-color: #2c3e50;
@@ -195,8 +189,8 @@ label {
 .test__options {
   display: flex;
   flex-direction: column;
-  gap: 12px;  /* Thêm khoảng cách giữa các đáp án */
-  margin-left: 20px; /* Đẩy đáp án sang trái */
+  gap: 10px;  /* Thêm khoảng cách giữa các đáp án */
+  margin-left: 0; /* Không cần đẩy các đáp án sang phải nữa */
   text-align: left;  /* Căn lề trái cho đáp án */
 }
 
