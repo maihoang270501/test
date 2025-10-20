@@ -1,18 +1,15 @@
-/* Reset CSS */
+/* General reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* General styles */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f7f6;
   color: #333;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
 }
 
 /* Header */
@@ -57,21 +54,17 @@ body {
 
 /* Main section */
 .main {
-  background-image: url('https://via.placeholder.com/1500x800'); /* Thêm ảnh nền đẹp */
-  background-size: cover;
-  background-position: center;
-  padding: 100px 20px;
+  padding: 50px 20px;
   text-align: center;
-  color: white;
 }
 
 .intro__section {
-  background: rgba(0, 0, 0, 0.5); /* Tối nền phía sau để dễ đọc chữ */
+  background: rgba(0, 0, 0, 0.5);
   padding: 50px 20px;
   border-radius: 10px;
   max-width: 600px;
   margin: 0 auto;
-  text-align: center;
+  color: white;
 }
 
 .intro__title {

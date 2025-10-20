@@ -23,8 +23,6 @@
     <section id="intro" class="intro__section">
       <h2 class="intro__title">Chào mừng bạn đến với MockTest</h2>
       <p class="intro__description">Kiểm tra kiến thức của bạn qua các bài test thú vị và bổ ích về nhiều lĩnh vực khác nhau!</p>
-
-      <!-- Nút bắt đầu làm bài kiểm tra -->
       <div class="start-container">
         <button class="start-button" onclick="startTest()">Bắt đầu làm bài</button>
       </div>
@@ -38,14 +36,13 @@
   </footer>
 
   <script>
-    // Kiểm tra xem người dùng đã đăng nhập chưa
     function startTest() {
-      const user = localStorage.getItem("user"); // Kiểm tra thông tin đăng nhập từ localStorage
+      const user = localStorage.getItem("user");
       if (!user) {
         alert("Vui lòng đăng nhập trước khi bắt đầu làm bài!");
-        window.location.href = "login.html"; // Chuyển hướng người dùng tới trang đăng nhập nếu chưa đăng nhập
+        window.location.href = "login.html";
       } else {
-        window.location.href = "test.html"; // Nếu đã đăng nhập, chuyển hướng tới trang kiểm tra
+        window.location.href = "test.html";
       }
     }
   </script>

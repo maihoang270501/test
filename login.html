@@ -21,15 +21,12 @@
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
         </div>
-
         <div class="login__input-group">
           <label for="password">Mật khẩu:</label>
           <input type="password" id="password" name="password" placeholder="Nhập mật khẩu của bạn" required>
         </div>
-
         <button type="submit" class="login__submit-btn">Đăng Nhập</button>
       </form>
-
       <p class="login__signup-link">
         Chưa có tài khoản? <a href="signup.html">Đăng ký ngay</a>
       </p>
@@ -38,27 +35,21 @@
 
   <footer class="footer">
     <ul class="footer__links">
-      <li class="footer__link-item"><a href="index.html" class="footer__link" tabindex="0">Trang chủ</a></li>
+      <li class="footer__link-item"><a href="index.html" class="footer__link">Trang chủ</a></li>
     </ul>
   </footer>
 
   <script>
-    // Kiểm tra thông tin đăng nhập
     function loginUser(event) {
-      event.preventDefault(); // Ngăn chặn form gửi đi mặc định
-
-      const email = document.getElementById("email").value.trim(); // Loại bỏ khoảng trắng
-      const password = document.getElementById("password").value.trim(); // Loại bỏ khoảng trắng
-
-      // Lấy thông tin đăng nhập từ localStorage
+      event.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
       const storedEmail = localStorage.getItem("userEmail");
       const storedPassword = localStorage.getItem("userPassword");
 
-      // Kiểm tra thông tin đăng nhập
       if (email === storedEmail && password === storedPassword) {
-        // Lưu thông tin người dùng vào localStorage
         localStorage.setItem("user", email);
-        window.location.href = "test.html"; // Chuyển hướng tới trang test
+        window.location.href = "test.html";
       } else {
         alert("Đăng nhập không thành công. Vui lòng kiểm tra lại email và mật khẩu.");
       }
