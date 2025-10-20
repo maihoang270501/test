@@ -1,0 +1,123 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header, main, footer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #1a73e8;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo h1 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.header__nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header__nav-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__cta-button {
+  background-color: #f5a623;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.main {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.main__about, .main__benefits, .main__how-to-use {
+  margin-bottom: 30px;
+}
+
+.main__title {
+  font-size: 2rem;
+  color: #333;
+}
+
+.main__description {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.main__image {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.main__benefits-list, .main__steps-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.main__benefit-item, .main__step-item {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer__link-item a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .header__nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main__title {
+    font-size: 1.5rem;
+  }
+
+  .main__image {
+    max-width: 100%;
+  }
+
+  .footer__links {
+    flex-direction: column;
+  }
+}
