@@ -183,7 +183,7 @@ label {
 .test__question {
   margin-bottom: 40px;
   text-align: left;
-  padding-left: 10px; /* Thêm lề trái cho câu hỏi */
+  padding-left: 15px; /* Căn lề trái cho câu hỏi */
 }
 
 .test__question p {
@@ -195,8 +195,8 @@ label {
 .test__options {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Thêm khoảng cách giữa các đáp án */
-  margin-left: 20px; /* Đẩy các đáp án sang phải */
+  gap: 12px; /* Thêm khoảng cách giữa các đáp án */
+  margin-left: 30px; /* Đẩy các đáp án sang phải để căn lề */
 }
 
 .test__options label {
@@ -208,6 +208,7 @@ label {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%; /* Đảm bảo các đáp án chiếm hết chiều rộng */
 }
 
 .test__options label:hover {
@@ -216,7 +217,7 @@ label {
 }
 
 .test__options input[type="radio"] {
-  margin-right: 15px;
+  margin-right: 15px; /* Khoảng cách giữa nút radio và chữ */
   accent-color: #e74c3c; /* Thay đổi màu sắc của radio button */
 }
 
