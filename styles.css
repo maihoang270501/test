@@ -195,8 +195,9 @@ label {
 .test__options {
   display: flex;
   flex-direction: column;
-  gap: 15px;  /* Thêm khoảng cách giữa các đáp án */
-  margin-left: 40px; /* Đẩy đáp án sang phải để căn lề hợp lý */
+  gap: 12px;  /* Thêm khoảng cách giữa các đáp án */
+  margin-left: 20px; /* Đẩy đáp án sang trái */
+  text-align: left;  /* Căn lề trái cho đáp án */
 }
 
 .test__options label {
