@@ -16,6 +16,7 @@ header, main, footer {
   margin: 0 auto;
 }
 
+/* Header */
 .header {
   background-color: #1a73e8;
   padding: 20px;
@@ -38,6 +39,7 @@ header, main, footer {
 .header__nav-item a {
   color: white;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .header__cta-button {
@@ -48,6 +50,17 @@ header, main, footer {
   text-decoration: none;
 }
 
+/* Focus states */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid #1a73e8;
+  outline-offset: 2px;
+  box-shadow: 0 0 5px rgba(26, 115, 232, 0.6);
+}
+
+/* Main */
 .main {
   padding: 50px 20px;
   text-align: center;
@@ -84,6 +97,7 @@ header, main, footer {
   margin: 10px 0;
 }
 
+/* Footer */
 .footer {
   background-color: #333;
   color: white;
@@ -103,21 +117,37 @@ header, main, footer {
   text-decoration: none;
 }
 
+/* Responsive Design for devices smaller than 768px */
 @media (max-width: 768px) {
   .header__nav-list {
     flex-direction: column;
     align-items: center;
   }
 
+  .header__cta-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+  }
+
   .main__title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .main__description {
+    font-size: 1rem;
   }
 
   .main__image {
     max-width: 100%;
+    height: auto;
   }
 
   .footer__links {
     flex-direction: column;
+  }
+
+  .footer__link-item {
+    margin-bottom: 10px;
   }
 }
