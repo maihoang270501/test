@@ -3,63 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MockTest - Nền tảng trực tuyến để luyện tập và kiểm tra kỹ năng của bạn">
-  <title>MockTest - Kiểm tra kỹ năng trực tuyến</title>
+  <title>Trang Chủ</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
   <header class="header">
     <div class="header__logo">
       <h1>MockTest</h1>
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list">
-        <li class="header__nav-item"><a href="#about" class="header__nav-link" tabindex="0">Giới thiệu</a></li>
-        <li class="header__nav-item"><a href="#how-to-use" class="header__nav-link" tabindex="0">Cách sử dụng</a></li>
-        <li class="header__nav-item"><a href="#contact" class="header__nav-link" tabindex="0">Liên hệ</a></li>
+        <li class="header__nav-item"><a href="login.html" class="header__nav-link" tabindex="0">Đăng nhập</a></li>
+        <li class="header__nav-item"><a href="signup.html" class="header__nav-link" tabindex="0">Đăng ký</a></li>
       </ul>
     </nav>
-    <!-- Nút Bắt đầu ngay chuyển tới trang test.html -->
-    <a href="test.html" class="header__cta-button" tabindex="0">Bắt đầu ngay</a>
   </header>
 
-  <!-- Main Content -->
   <main class="main">
-    <section id="about" class="main__about">
-      <h2 class="main__title">MockTest - Kiểm tra kỹ năng trực tuyến</h2>
-      <p class="main__description">MockTest giúp bạn luyện tập và kiểm tra các kỹ năng một cách hiệu quả, chuẩn bị cho các kỳ thi hoặc thử thách thực tế.</p>
-      
-      <!-- Thêm hình ảnh -->
-      <img src="https://example.com/your-image.jpg" alt="MockTest Image" class="main__image">
-    </section>
+    <section id="intro" class="intro__section">
+      <h2 class="intro__title">Chào mừng bạn đến với MockTest</h2>
+      <p class="intro__description">Đây là nơi bạn có thể kiểm tra kiến thức của mình về các lĩnh vực khác nhau.</p>
 
-    <section id="benefits" class="main__benefits">
-      <h3 class="main__subtitle">Lợi ích khi sử dụng MockTest</h3>
-      <ul class="main__benefits-list">
-        <li class="main__benefit-item">Luyện tập với các đề thi mô phỏng thực tế</li>
-        <li class="main__benefit-item">Đánh giá kết quả và nhận xét chi tiết</li>
-        <li class="main__benefit-item">Cải thiện kỹ năng trong thời gian ngắn</li>
-      </ul>
-    </section>
-
-    <section id="how-to-use" class="main__how-to-use">
-      <h3 class="main__subtitle">Cách sử dụng MockTest</h3>
-      <ol class="main__steps-list">
-        <li class="main__step-item">Đăng ký tài khoản trên nền tảng của chúng tôi.</li>
-        <li class="main__step-item">Chọn bài kiểm tra phù hợp với nhu cầu của bạn.</li>
-        <li class="main__step-item">Bắt đầu làm bài và nhận kết quả ngay lập tức!</li>
-      </ol>
+      <!-- Nút bắt đầu làm bài kiểm tra -->
+      <button class="start-button" onclick="startTest()">Bắt đầu</button>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <ul class="footer__links">
-      <li class="footer__link-item"><a href="#terms" class="footer__link">Điều khoản sử dụng</a></li>
-      <li class="footer__link-item"><a href="#privacy" class="footer__link">Chính sách bảo mật</a></li>
-      <li class="footer__link-item"><a href="#contact" class="footer__link">Liên hệ</a></li>
+      <li class="footer__link-item"><a href="index.html" class="footer__link" tabindex="0">Trang chủ</a></li>
     </ul>
   </footer>
+
+  <script>
+    // Kiểm tra xem người dùng đã đăng nhập chưa
+    function startTest() {
+      const user = localStorage.getItem("user"); // Kiểm tra thông tin đăng nhập từ localStorage
+      if (!user) {
+        alert("Vui lòng đăng nhập trước khi bắt đầu làm bài!");
+        window.location.href = "login.html"; // Chuyển hướng người dùng tới trang đăng nhập nếu chưa đăng nhập
+      } else {
+        window.location.href = "test.html"; // Nếu đã đăng nhập, chuyển hướng tới trang kiểm tra
+      }
+    }
+  </script>
 </body>
 </html>
