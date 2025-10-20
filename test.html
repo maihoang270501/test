@@ -15,6 +15,7 @@
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item"><a href="index.html" class="header__nav-link" tabindex="0">Trang chủ</a></li>
+        <li class="header__nav-item"><a href="login.html" class="header__nav-link" tabindex="0">Đăng xuất</a></li>
       </ul>
     </nav>
   </header>
@@ -22,6 +23,11 @@
   <main class="main">
     <section id="test" class="test__section">
       <h2 class="test__title">Test Kiến Thức</h2>
+      
+      <div class="user-info">
+        <p>Chào mừng bạn, <span id="username"></span>!</p>
+      </div>
+      
       <form id="test-form" class="test__form">
         <!-- Câu 1 -->
         <div class="test__question">
@@ -132,16 +138,17 @@
   </footer>
 
   <script>
-    // Function to display checkmark on the selected answer
-    function showCheckMark(inputElement) {
-      let labels = inputElement.closest('.test__question').querySelectorAll('label');
-      labels.forEach(label => {
-        label.style.fontWeight = 'normal'; // reset all labels
-      });
-      inputElement.closest('label').style.fontWeight = 'bold'; // highlight selected label
+    // Kiểm tra xem người dùng đã đăng nhập chưa
+    window.onload = function() {
+      const user = localStorage.getItem("user");
+      if (!user) {
+        window.location.href = "login.html"; // Chuyển hướng nếu chưa đăng nhập
+      } else {
+        document.getElementById("username").innerText = user; // Hiển thị tên người dùng
+      }
     }
 
-    // Function to check answers and show result
+    // Function to submit the test and show results
     function submitTest() {
       const answers = {
         question1: "A",
@@ -159,7 +166,7 @@
       let score = 0;
       let totalQuestions = Object.keys(answers).length;
 
-      // Loop through each question and check answers
+      // Kiểm tra đáp án
       for (let i = 1; i <= totalQuestions; i++) {
         let selectedAnswer = document.querySelector(`input[name="question${i}"]:checked`);
         if (selectedAnswer && selectedAnswer.value === answers[`question${i}`]) {
@@ -167,11 +174,9 @@
         }
       }
 
-      // Hide the form and show the success message
+      // Hiển thị kết quả
       document.getElementById("test-form").style.display = "none";
       document.getElementById("success-message").style.display = "block";
-      
-      // Display the result message
       document.getElementById("result-message").innerText = `Bạn đã trả lời đúng ${score} trên ${totalQuestions} câu hỏi.`;
     }
   </script>
