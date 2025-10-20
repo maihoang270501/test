@@ -181,9 +181,9 @@ label {
 
 /* Câu hỏi và đáp án */
 .test__question {
-  margin-bottom: 40px;
-  text-align: left;
-  padding-left: 15px; /* Căn lề trái cho câu hỏi */
+  margin-bottom: 30px;
+  text-align: left;  /* Căn lề trái cho câu hỏi */
+  padding-left: 20px; /* Thêm lề trái cho câu hỏi */
 }
 
 .test__question p {
@@ -195,8 +195,8 @@ label {
 .test__options {
   display: flex;
   flex-direction: column;
-  gap: 12px; /* Thêm khoảng cách giữa các đáp án */
-  margin-left: 30px; /* Đẩy các đáp án sang phải để căn lề */
+  gap: 15px;  /* Thêm khoảng cách giữa các đáp án */
+  margin-left: 40px; /* Đẩy đáp án sang phải để căn lề hợp lý */
 }
 
 .test__options label {
@@ -208,7 +208,7 @@ label {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 100%; /* Đảm bảo các đáp án chiếm hết chiều rộng */
+  width: 100%;
 }
 
 .test__options label:hover {
