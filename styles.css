@@ -179,13 +179,30 @@ label {
   cursor: pointer;
 }
 
+/* Câu hỏi và đáp án */
 .test__question {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  text-align: left;
+  padding-left: 10px; /* Thêm lề trái cho câu hỏi */
+}
+
+.test__question p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.test__options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Thêm khoảng cách giữa các đáp án */
+  margin-left: 20px; /* Đẩy các đáp án sang phải */
 }
 
 .test__options label {
-  display: block;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  padding: 12px;
   font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -196,6 +213,11 @@ label {
 .test__options label:hover {
   background-color: #f1f1f1;
   transform: translateY(-2px);
+}
+
+.test__options input[type="radio"] {
+  margin-right: 15px;
+  accent-color: #e74c3c; /* Thay đổi màu sắc của radio button */
 }
 
 /* Success message */
