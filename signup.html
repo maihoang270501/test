@@ -16,7 +16,7 @@
   <main class="main">
     <section id="signup" class="signup__section">
       <h2 class="signup__title">Đăng Ký</h2>
-      <form id="signup-form" class="signup__form" onsubmit="return registerUser()">
+      <form id="signup-form" class="signup__form" onsubmit="return registerUser(event)">
         <div class="signup__input-group">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
@@ -40,16 +40,19 @@
   </footer>
 
   <script>
-    // Function to register user (mock registration)
-    function registerUser() {
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
+    // Function to register user and save data in localStorage
+    function registerUser(event) {
+      event.preventDefault(); // Ngăn chặn form gửi đi mặc định
 
-      // Mock registration (save user info in localStorage)
-      localStorage.setItem("user", email);
+      const email = document.getElementById("email").value.trim(); // Loại bỏ khoảng trắng
+      const password = document.getElementById("password").value.trim(); // Loại bỏ khoảng trắng
+
+      // Lưu thông tin vào localStorage
+      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userPassword", password);
+
       alert("Đăng ký thành công! Bạn có thể đăng nhập ngay.");
       window.location.href = "login.html"; // Chuyển hướng về trang đăng nhập
-      return false;
     }
   </script>
 </body>

@@ -47,14 +47,15 @@
     function loginUser(event) {
       event.preventDefault(); // Ngăn chặn form gửi đi mặc định
 
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
+      const email = document.getElementById("email").value.trim(); // Loại bỏ khoảng trắng
+      const password = document.getElementById("password").value.trim(); // Loại bỏ khoảng trắng
 
-      // Đây là thông tin đăng nhập giả lập, bạn có thể thay thế bằng thông tin từ server hoặc cơ sở dữ liệu
-      const validEmail = "test@example.com";
-      const validPassword = "123456";
+      // Lấy thông tin đăng nhập từ localStorage
+      const storedEmail = localStorage.getItem("userEmail");
+      const storedPassword = localStorage.getItem("userPassword");
 
-      if (email === validEmail && password === validPassword) {
+      // Kiểm tra thông tin đăng nhập
+      if (email === storedEmail && password === storedPassword) {
         // Lưu thông tin người dùng vào localStorage
         localStorage.setItem("user", email);
         window.location.href = "test.html"; // Chuyển hướng tới trang test
