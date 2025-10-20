@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang Chủ</title>
+  <title>Trang Chủ | MockTest</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list">
-        <li class="header__nav-item"><a href="login.html" class="header__nav-link" tabindex="0">Đăng nhập</a></li>
-        <li class="header__nav-item"><a href="signup.html" class="header__nav-link" tabindex="0">Đăng ký</a></li>
+        <li class="header__nav-item"><a href="login.html" class="header__nav-link">Đăng nhập</a></li>
+        <li class="header__nav-item"><a href="signup.html" class="header__nav-link">Đăng ký</a></li>
       </ul>
     </nav>
   </header>
@@ -22,16 +22,18 @@
   <main class="main">
     <section id="intro" class="intro__section">
       <h2 class="intro__title">Chào mừng bạn đến với MockTest</h2>
-      <p class="intro__description">Đây là nơi bạn có thể kiểm tra kiến thức của mình về các lĩnh vực khác nhau.</p>
+      <p class="intro__description">Kiểm tra kiến thức của bạn qua các bài test thú vị và bổ ích về nhiều lĩnh vực khác nhau!</p>
 
       <!-- Nút bắt đầu làm bài kiểm tra -->
-      <button class="start-button" onclick="startTest()">Bắt đầu</button>
+      <div class="start-container">
+        <button class="start-button" onclick="startTest()">Bắt đầu làm bài</button>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
     <ul class="footer__links">
-      <li class="footer__link-item"><a href="index.html" class="footer__link" tabindex="0">Trang chủ</a></li>
+      <li class="footer__link-item"><a href="index.html" class="footer__link">Trang chủ</a></li>
     </ul>
   </footer>
 
