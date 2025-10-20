@@ -15,7 +15,7 @@
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item"><a href="index.html" class="header__nav-link" tabindex="0">Trang chủ</a></li>
-        <li class="header__nav-item"><a href="login.html" class="header__nav-link" tabindex="0">Đăng xuất</a></li>
+        <li class="header__nav-item"><a href="login.html" class="header__nav-link" tabindex="0" onclick="logout()">Đăng xuất</a></li>
       </ul>
     </nav>
   </header>
@@ -178,6 +178,12 @@
       document.getElementById("test-form").style.display = "none";
       document.getElementById("success-message").style.display = "block";
       document.getElementById("result-message").innerText = `Bạn đã trả lời đúng ${score} trên ${totalQuestions} câu hỏi.`;
+    }
+
+    // Hàm đăng xuất
+    function logout() {
+      localStorage.removeItem("user");  // Xóa thông tin đăng nhập khỏi localStorage
+      window.location.href = "login.html"; // Chuyển hướng về trang đăng nhập
     }
   </script>
 </body>
